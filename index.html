@@ -13,21 +13,21 @@
     <div id="container">
       <div id="header">
         <h1>Metric/Imperial Unit Conversion</h1>
-        <input type="text">
-        <button>Convert</button>
+        <input type="text" id="input-el">
+        <button id="convert-btn">Convert</button>
       </div>
       <main id="output-container">
         <div class="results">
           <h2>Length (Meter/Feet)</h2>
-          <p>20 meters = 65 feet | 20 feet = 6.096 meters</p>
+          <p><span class="input-num"></span> meters = 65 feet | <span class="input-num"></span> feet = 6.096 meters</p>
         </div>
         <div class="results">
           <h2>Volume (Liters/Gallons)</h2>
-          <p>20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+          <p><span class="input-num">20</span> liters = 5.284 gallons | <span class="input-num">20</span> gallons = 75.708 liters</p>
         </div>
         <div class="results">
           <h2>Mass (Kilograms/Pounds)</h2>
-          <p>20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+          <p><span class="input-num">20</span> kilos = 44.092 pounds | <span class="input-num">20</span> pounds = 9.072 kilos</p>
         </div>
       </div>
     </main>
