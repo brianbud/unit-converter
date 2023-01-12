@@ -6,6 +6,11 @@
 
 const convertEl = document.getElementById('convert-btn');
 const feetEl = document.getElementById('feet');
+const meteresEl = document.getElementById('meters');
+const gallonsEl = document.getElementById('gallons');
+const litersEl = document.getElementById('liters');
+const poundsEl = document.getElementById('pounds');
+const kilosEl = document.getElementById('kilos');
 const inputEl = document.getElementById('input-el');
 let inputNumEl = document.getElementsByClassName('input-num');
 
