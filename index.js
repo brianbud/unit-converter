@@ -5,14 +5,22 @@
 */
 
 const convertEl = document.getElementById('convert-btn');
+const feetEl = document.getElementById('feet');
 const inputEl = document.getElementById('input-el');
 let inputNumEl = document.getElementsByClassName('input-num');
-console.log(inputNumEl.length);
 
 convertEl.addEventListener('click', convert);
 
 function convert() {
+  let input = Number(inputEl.value);
+
   for (let i = 0; i <= inputNumEl.length; i++) {
-    inputNumEl[i].textContent = inputEl.value;
+    inputNumEl[i].textContent = input;
+    convertMeterToFeet(input);
   }
+}
+
+function convertMeterToFeet(input) {
+  let feet = input * 3.281;
+  feetEl.textContent = feet;
 }
