@@ -32,29 +32,29 @@ function convert() {
 
 function convertMeterToFeet(input) {
   let feet = input * 3.281;
-  feetEl.textContent = feet;
+  feetEl.textContent = feet.toFixed(3);
 }
 
 function convertFeetToMeter(input) {
   let meter = input * 0.3048;
-  meteresEl.textContent = meter;
+  meteresEl.textContent = meter.toFixed(3);
 }
 
 function convertLitersToGallons(input) {
   let gallons = input * 0.264172;
-  gallonsEl.textContent = gallons;
+  gallonsEl.textContent = gallons.toFixed(3);
 }
 
 function convertGallonsToLiters(input) {
   let liters = input * 3.78541;
-  litersEl.textContent = liters;
+  litersEl.textContent = liters.toFixed(3);
 }
 
 function convertKilosToPounds(input) {
   let pounds = input * 2.20462;
-  poundsEl.textContent = pounds;
+  poundsEl.textContent = pounds.toFixed(3);
 }
 function convertPoundsToKilos(input) {
   let kilos = input / 2.20462;
-  kilosEl.textContent = kilos;
+  kilosEl.textContent = kilos.toFixed(3);
 }
