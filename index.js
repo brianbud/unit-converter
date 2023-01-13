@@ -1,60 +1,25 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
-
-const convertEl = document.getElementById('convert-btn');
-const feetEl = document.getElementById('feet');
-const meteresEl = document.getElementById('meters');
-const gallonsEl = document.getElementById('gallons');
-const litersEl = document.getElementById('liters');
-const poundsEl = document.getElementById('pounds');
-const kilosEl = document.getElementById('kilos');
+const metersFeet = document.getElementById('meters-feet');
+const litersGallons = document.getElementById('liters-gallons');
+const kilosPounds = document.getElementById('kilos-pounds');
 const inputEl = document.getElementById('input-el');
-let inputNumEl = document.getElementsByClassName('input-num');
+const button = document.getElementById('convert-btn');
 
-convertEl.addEventListener('click', convert);
+button.addEventListener('click', setCalc);
 
-function convert() {
-  let input = Number(inputEl.value);
+function setCalc() {
+  let input = inputEl.value;
+  metersFeet.innerHTML = `
+      ${input} meters = ${input * 3.281} feet | 
+      ${input} feet = ${input * 0.3048} meters
+    `;
 
-  for (let i = 0; i <= inputNumEl.length; i++) {
-    inputNumEl[i].textContent = input;
-    convertMeterToFeet(input);
-    convertFeetToMeter(input);
-    convertLitersToGallons(input);
-    convertGallonsToLiters(input);
-    convertKilosToPounds(input);
-    convertPoundsToKilos(input);
-  }
-}
+  litersGallons.innerHTML = `
+      ${input} liters = ${input * 0.264172} gallons |
+      ${input} gallons = ${input * 3.78541} liters
+    `;
 
-function convertMeterToFeet(input) {
-  let feet = input * 3.281;
-  feetEl.textContent = feet.toFixed(3);
-}
-
-function convertFeetToMeter(input) {
-  let meter = input * 0.3048;
-  meteresEl.textContent = meter.toFixed(3);
-}
-
-function convertLitersToGallons(input) {
-  let gallons = input * 0.264172;
-  gallonsEl.textContent = gallons.toFixed(3);
-}
-
-function convertGallonsToLiters(input) {
-  let liters = input * 3.78541;
-  litersEl.textContent = liters.toFixed(3);
-}
-
-function convertKilosToPounds(input) {
-  let pounds = input * 2.20462;
-  poundsEl.textContent = pounds.toFixed(3);
-}
-function convertPoundsToKilos(input) {
-  let kilos = input / 2.20462;
-  kilosEl.textContent = kilos.toFixed(3);
+  kilosPounds.innerHTML = `
+      ${input} kilos = ${input * 2.20462} pounds | 
+      ${input} pounds = ${input / 2.20462} kilos
+    `;
 }
